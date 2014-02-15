@@ -1,0 +1,20 @@
+{
+  "name": "mean-logger",
+  "version": "0.0.1",
+  "description": "A Logging Module for MEAN Apps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R landing lib/mean-logger.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "mean-logger"
+  },
+  "keywords": [
+    "logger",
+    "mean",
+    "log"
+  ],
+  "author": "Amos Haviv(Linnovate LTD.)",
+  "license": "MIT"
+}
