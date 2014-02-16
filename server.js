@@ -5,7 +5,7 @@ var gapi = require('googleapis');
 gapi.discover('youtube', 'v3');
 
 
-var port = 3000;
+var port = 4000;
 var app = require('http').createServer(handler);
 var io = require('socket.io').listen(app);
 
@@ -29,9 +29,10 @@ function handler (req, res) {
 
 
 io.sockets.on('connection', function (socket) {
-
+		socket.emit('log', {foo:'hello'});
 		// when the client emits 'sendchat', this listens and executes
 		socket.on('message', function (data) {
+	
 		console.log("this is the data object we are returning " + data); 	
 		switch (data.intent) {
 			case "play_youtube": 
